@@ -8,6 +8,10 @@ let turn2=false;
 
 let arr=[[0,1,2],[0,3,6],[0,4,8],[1,4,7],[2,5,8],[2,4,6],[3,4,5],[6,7,8]];
 let i=10;
+
+
+
+
 boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
         if(turn1){
@@ -15,6 +19,8 @@ boxes.forEach((box)=>{
             turn1=false;
             turn2=true;
             i-=1;
+            box.classList.remove('coloro');
+            
             
 
             }
@@ -23,6 +29,7 @@ boxes.forEach((box)=>{
             turn2=false;
             turn1=true;
             i-=1
+            box.classList.add('coloro');
             
         }
         box.disabled=true;
